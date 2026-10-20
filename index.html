@@ -1,35 +1,261 @@
 
-<section id="chapters">
-  <h2>WEIRD THINGS — Chapters 1 &amp; 2</h2>
-  <p>
-    Two chapters. One mystery.
-    Watch the complete movie below.
-  </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
 
-  <div class="movie-player">
-    <iframe
-      src="https://drive.google.com/file/d/1F08XRG5_JGq8ROH-hdj1gzDOO3hGuYt2/preview"
-      title="WEIRD THINGS Chapters 1 and 2"
-      allow="autoplay; fullscreen"
-      allowfullscreen>
-    </iframe>
-  </div>
+  <title>WEIRD THINGS — Chapters 1 & 2</title>
 
-  <p><strong>Chapter 1:</strong> The Disappearance of Eljan</p>
-  <p><strong>Chapter 2:</strong> Eljan Is Still Missing</p>
-  <p>Watch both chapters together in the complete movie above.</p>
-</section>
+  <meta name="description"
+        content="Two chapters. One mystery. Watch WEIRD THINGS.">
 
-<style>
-.movie-player {
-  width: 100%;
-  max-width: 900px;
-  aspect-ratio: 16 / 9;
-  margin: 20px auto;
-}
-.movie-player iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-</style>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #080808;
+      color: #f5f5f5;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      min-height: 290px;
+      padding: 65px 20px;
+      text-align: center;
+      background:
+        radial-gradient(ellipse at center, #351010 0%, #140707 40%, #080808 75%);
+      border-bottom: 1px solid #3a1717;
+    }
+
+    .brand {
+      color: #e50914;
+      font-size: clamp(2.7rem, 9vw, 5.5rem);
+      font-weight: 900;
+      letter-spacing: 7px;
+      text-shadow: 0 0 25px #9b0000;
+    }
+
+    .tagline {
+      color: #bbb;
+      font-size: 1rem;
+      letter-spacing: 3px;
+      margin-top: 12px;
+    }
+
+    main {
+      width: min(100% - 32px, 1000px);
+      margin: 0 auto;
+      padding: 45px 0;
+    }
+
+    h2 {
+      font-size: clamp(1.5rem, 5vw, 2.2rem);
+      margin-bottom: 8px;
+    }
+
+    .intro {
+      color: #aaa;
+      margin-bottom: 25px;
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+      border: 1px solid #482020;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 35px #30080866;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .drive-link {
+      display: inline-block;
+      margin-top: 14px;
+      color: #ff6666;
+      text-decoration: none;
+    }
+
+    .drive-link:hover {
+      text-decoration: underline;
+    }
+
+    .chapters {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 45px;
+    }
+
+    .chapter {
+      padding: 24px;
+      background: #121212;
+      border: 1px solid #292929;
+      border-radius: 10px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .chapter:hover {
+      border-color: #a71919;
+      transform: translateY(-3px);
+    }
+
+    .chapter-number {
+      color: #e50914;
+      font-size: 0.8rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .chapter h3 {
+      font-size: 1.2rem;
+      margin-top: 8px;
+    }
+
+    .chapter p {
+      color: #aaa;
+      margin-top: 8px;
+      font-size: 0.95rem;
+    }
+
+    .mystery {
+      margin-top: 45px;
+      padding: 25px;
+      text-align: center;
+      background: #110909;
+      border: 1px solid #351717;
+      border-radius: 10px;
+    }
+
+    .mystery h2 {
+      color: #e50914;
+    }
+
+    .mystery p {
+      color: #bbb;
+    }
+
+    footer {
+      padding: 25px 15px;
+      text-align: center;
+      color: #666;
+      border-top: 1px solid #222;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        min-height: 230px;
+        padding: 55px 12px;
+      }
+
+      .brand {
+        letter-spacing: 4px;
+      }
+
+      .tagline {
+        letter-spacing: 1px;
+      }
+
+      .chapters {
+        grid-template-columns: 1fr;
+      }
+
+      main {
+        padding-top: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="brand">WEIRD THINGS</div>
+    <p class="tagline">TWO CHAPTERS. ONE MYSTERY.</p>
+  </header>
+
+  <main>
+
+    <section id="movie">
+      <h2>WEIRD THINGS — Chapters 1 &amp; 2</h2>
+
+      <p class="intro">
+        Watch the complete movie below. The mystery starts here.
+      </p>
+
+      <div class="video-container">
+        <iframe
+          src="https://drive.google.com/file/d/1F08XRG5_JGq8ROH-hdj1gzDOO3hGuYt2/preview"
+          title="WEIRD THINGS — Complete Movie"
+          allow="autoplay; fullscreen"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <a
+        class="drive-link"
+        href="https://drive.google.com/file/d/1F08XRG5_JGq8ROH-hdj1gzDOO3hGuYt2/view"
+        target="_blank"
+        rel="noopener noreferrer">
+        Having trouble? Watch the movie on Google Drive →
+      </a>
+    </section>
+
+    <section class="chapters" id="chapters">
+
+      <article class="chapter">
+        <span class="chapter-number">CHAPTER 01</span>
+        <h3>The Disappearance of Eljan</h3>
+        <p>
+          It all begins with a disappearance. Nothing is as
+          simple as it seems.
+        </p>
+      </article>
+
+      <article class="chapter">
+        <span class="chapter-number">CHAPTER 02</span>
+        <h3>Eljan Is Still Missing</h3>
+        <p>
+          The mystery continues. The truth is still out there.
+        </p>
+      </article>
+
+    </section>
+
+    <section class="mystery">
+      <h2>Something Isn't Right.</h2>
+      <p>
+        Watch carefully. Every detail might matter.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>WEIRD THINGS &copy; 2026</p>
+    <p>An independent mystery film project.</p>
+  </footer>
+
+</body>
+</html>
